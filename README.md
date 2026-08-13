@@ -46,14 +46,6 @@ Cplusplus-Learning/
 | 类和对象 - 多态 | 多态基本语法、纯虚函数与抽象类、虚析构与纯虚析构 |
 | 文件操作 | 文本文件读写、二进制文件读写 |
 
-## 如何运行
-
-代码基于 Visual Studio 开发，也可用其他支持 C++ 的编译器（如 g++、Clang）编译运行：
-
-```bash
-g++ 01-basic/hello.cpp -o hello
-./hello
-```
 
 ## 说明
 
