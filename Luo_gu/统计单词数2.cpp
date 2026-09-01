@@ -10,7 +10,7 @@ void xiao(char &c)
 
 int main()
 {
-    string word, art;
+    string word, art;           //word为单词，art为文章(article)
     cin >> word;                // 读第一行：要查找的单词，cin>>自动读到换行停止，丢弃换行符
     for_each(word.begin(), word.end(), xiao); // 将查找单词全部转为小写，实现不区分大小写
     
@@ -25,7 +25,7 @@ int main()
 
     // i：文章中尝试匹配的起始下标
     // i + wlen <= alen：保证截取不会越界，后面要有足够字符
-    for(int i = 0; i + wlen <= alen; ++i)
+    for(int i = 0; i + wlen <= alen; i++)
     {
         string sub = art.substr(i, wlen); // 从i位置，截取长度wlen的一段子串
         for_each(sub.begin(), sub.end(), xiao); // 把截取出来的片段转小写
