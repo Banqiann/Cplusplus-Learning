@@ -23,15 +23,13 @@ signed main()
     {
         for(int j = 1; j <= m; j++)
         {
-            if (j >= price[i])
+            if(j < price[i])
             {
-                // 买得起这道菜：方案数 = 不买的方案数 + 买了这道菜的方案数
-                dp[i][j] = dp[i - 1][j] + dp[i - 1][j - price[i]];
+                dp[i][j] = dp[i - 1][j];
             }
             else
             {
-                // 买不起这道菜：只能不买
-                dp[i][j] = dp[i - 1][j];
+                dp[i][j] = dp[i - 1][j] + dp[i - 1][j - price[i]];
             }
         }
     }
