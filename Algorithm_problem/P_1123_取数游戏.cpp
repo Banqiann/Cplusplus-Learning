@@ -29,7 +29,7 @@ void dfs(int x, int y, int sum)
     //分支一 : 没选这个格子
     dfs(nx , ny , sum);
     //分支二 ：选了这个格子
-    if(cnt[x][y] == 0)
+    if(cnt[x][y] == 0)                   // 前提是这个格子可以选
     {
         for(int i = 0; i <= 8; i++)
         {
